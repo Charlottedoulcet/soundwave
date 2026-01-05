@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-background: #2F303A;
+  --color-header-footer: #202027;
+  
+  --color-button-bg: #1762A7;
+  --color-button-hover: #2180d8;
+  --color-button-focus: #2796ff;
+  
+  --color-circle-1: rgba(188, 58, 128, 0.1);
+  --color-circle-2: rgba(52, 87, 178, 0.1);
+  
+  --color-nav-hover: #202027;
+  
+  --color-border-input: #2E3852;
+  --color-border-input-focus: #596da0;
+  
+  --color-accent: #2796ff;
+  --color-white: #ffffff;
+  --color-error: #ff4757;
+  
+  --gradient: linear-gradient(90deg, #E91E63 0%, #9C27B0 25%, #2196F3 50%, #00BCD4 75%, #FFEB3B 100%);
+
+  --font-primary: 'Poppins', sans-serif;
+  
+  --font-size-small: 1rem;
+  --font-size-base: 1.2rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2rem;
+  --font-size-xlarge: 3rem;
+  
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 3rem;
+  --spacing-xlarge: 5rem;
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  background-color: var(--color-background);
+  color: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-normal);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  background: none;
+  transition: all var(--transition-normal);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-header-footer);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-button-bg);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-button-hover);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -7,7 +7,7 @@ import Home from './pages/Home/Home';
 import Discover from './pages/Discover/Discover';
 import Join from './pages/Join/Join';
 
-export const App = () => {
+const App = () => {
   return (
   <BrowserRouter>
     <Navbar />
@@ -19,4 +19,6 @@ export const App = () => {
     <Footer />
   </BrowserRouter>
   );
-}; 
+};  
+
+export default App

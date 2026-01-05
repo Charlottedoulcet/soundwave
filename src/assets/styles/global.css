@@ -1,40 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --color-background: #2F303A;
+  --color-background: #2f303a;
   --color-header-footer: #202027;
-  
-  --color-button-bg: #1762A7;
+
+  --color-button-bg: #1762a7;
   --color-button-hover: #2180d8;
   --color-button-focus: #2796ff;
-  
+
   --color-circle-1: rgba(188, 58, 128, 0.1);
   --color-circle-2: rgba(52, 87, 178, 0.1);
-  
+
   --color-nav-hover: #202027;
-  
-  --color-border-input: #2E3852;
+
+  --color-border-input: #2e3852;
   --color-border-input-focus: #596da0;
-  
+
   --color-accent: #2796ff;
   --color-white: #ffffff;
   --color-error: #ff4757;
-  
-  --gradient: linear-gradient(90deg, #E91E63 0%, #9C27B0 25%, #2196F3 50%, #00BCD4 75%, #FFEB3B 100%);
 
-  --font-primary: 'Poppins', sans-serif;
-  
+  --gradient: linear-gradient(90deg, #e91e63 0%, #9c27b0 25%, #2196f3 50%, #00bcd4 75%, #ffeb3b 100%);
+
+  --font-primary: "Poppins", sans-serif;
+
   --font-size-small: 1rem;
   --font-size-base: 1.2rem;
   --font-size-medium: 1.5rem;
   --font-size-large: 2rem;
   --font-size-xlarge: 3rem;
-  
+
   --spacing-small: 1rem;
   --spacing-medium: 2rem;
   --spacing-large: 3rem;
   --spacing-xlarge: 5rem;
-  
+
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
@@ -104,7 +104,12 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   line-height: 1.2;
 }
@@ -134,4 +139,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-center {
   text-align: center;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
 }

@@ -112,3 +112,194 @@
   right: -335px;
   z-index: 1;
 }
+
+@media (max-width: 1680px) {
+  .home-image img {
+    max-width: 480px;
+  }
+
+  .home-title {
+    font-size: 5rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.9rem;
+  }
+
+  .circle-1 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .circle-2 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .circle-3 {
+    width: 800px;
+    height: 800px;
+    bottom: -300px;
+    right: -300px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .home-image img {
+    max-width: 440px;
+  }
+
+  .home-title {
+    font-size: 4.8rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.8rem;
+    max-width: 440px;
+  }
+
+  .circle-1 {
+    width: 420px;
+    height: 420px;
+  }
+
+  .circle-2 {
+    width: 420px;
+    height: 420px;
+  }
+
+  .circle-3 {
+    width: 750px;
+    height: 750px;
+    bottom: -280px;
+    right: -280px;
+  }
+}
+
+@media (max-width: 1536px) {
+  .home-image img {
+    max-width: 400px;
+  }
+
+  .home-title {
+    font-size: 4.5rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.7rem;
+    max-width: 400px;
+  }
+
+  .circle-1 {
+    width: 380px;
+    height: 380px;
+  }
+
+  .circle-2 {
+    width: 380px;
+    height: 380px;
+  }
+
+  .circle-3 {
+    width: 680px;
+    height: 680px;
+    bottom: -250px;
+    right: -250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-container {
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .home-image {
+    padding-left: 2rem;
+  }
+
+  .home-image img {
+    max-width: 360px;
+  }
+
+  .home-hero {
+    padding-right: 1rem;
+  }
+
+  .home-title {
+    font-size: 4.2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.6rem;
+    max-width: 380px;
+  }
+
+  .circle-1 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle-2 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .circle-3 {
+    width: 600px;
+    height: 600px;
+    bottom: -230px;
+    right: -230px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    height: 100vh;
+    min-height: 100vh;
+  }
+
+  .home-container {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .home-image {
+    display: none;
+  }
+
+  .home-hero {
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .home-title {
+    font-size: 3.5rem;
+    max-width: 180px;
+    line-height: 1.2;
+  }
+
+  .home-subtitle {
+    font-size: 1.4rem;
+    max-width: 260px;
+    line-height: 1.4;
+  }
+
+  .circle-1 {
+    width: 280px;
+    height: 280px;
+    bottom: -80px;
+    left: -100px;
+    top: auto;
+    transform: none;
+  }
+
+  .circle-2 {
+    display: none;
+  }
+
+  .circle-3 {
+    display: none;
+  }
+}

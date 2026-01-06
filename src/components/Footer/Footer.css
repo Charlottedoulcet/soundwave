@@ -58,13 +58,36 @@
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    gap: 2rem;
+  .footer {
+    padding: 2rem 0;
   }
 
-  .footer-links,
+  .footer-container {
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  .footer-links {
+    gap: 1.5rem;
+  }
+
+  .footer-link {
+    font-size: 1rem;
+  }
+
   .footer-social {
-    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .footer-socialLink {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  .footer-socialLink img {
+    width: 16px;
+    height: 16px;
   }
 }

@@ -10,8 +10,6 @@ const Join = () => {
     password: "",
   });
 
-  const [errors, setErrors] = useState({});
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -22,67 +20,68 @@ const Join = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validación simple para probar
-    const newErrors = {};
+    const existingUsers = JSON.parse(localStorage.getItem("soundwaveUsers") || "[]");
 
-    if (!formData.name) {
-      newErrors.name = "Name is required";
-    }
+    const newUser = {
+      ...formData,
+      id: Date.now(),
+      joinedAt: new Date().toISOString(),
+    };
+    existingUsers.push(newUser);
 
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-    }
+    localStorage.setItem("soundwaveUsers", JSON.stringify(existingUsers));
 
-    if (!formData.password || formData.password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters";
-    }
+    console.log("User saved to localStorage:", newUser);
+    console.log("All users:", existingUsers);
 
-    setErrors(newErrors);
+    alert(`Welcome to SoundWave, ${formData.name}!`);
 
-    if (Object.keys(newErrors).length === 0) {
-      alert("Form submitted successfully!");
-    }
+    setFormData({ name: "", email: "", password: "" });
   };
 
   return (
     <div className="join-page">
-      <h1>Join the fun.</h1>
-      <form onSubmit={handleSubmit}>
-        <FormInput
-          label="Name"
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          error={errors.name}
-        />
-
-        <FormInput
-          label="Email"
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          error={errors.email}
-        />
-
-        <FormInput
-          label="Password"
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          error={errors.password}
-        />
-
-        <Button
-          type="submit"
-          variant="primary"
-          size="lg"
-        >
-          Join Now
-        </Button>
-      </form>
+      <div className="join-container">
+        <div className="join-content">
+          <h1 className="join-title">
+            Join the <span className="highlight">fun.</span>
+          </h1>
+        </div>
+        <div className="join-form-card">
+          <form onSubmit={handleSubmit}>
+            <FormInput
+              label="Name:"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <FormInput
+              label="Email:"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <FormInput
+              label="Password:"
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <Button
+              type="submit"
+              variant="primary"
+              size="lg"
+            >
+              Join Now
+            </Button>
+          </form>
+        </div>
+      </div>
+      <div className="join-circle join-circle-1"></div>
+      <div className="join-circle join-circle-2"></div>
     </div>
   );
 };
